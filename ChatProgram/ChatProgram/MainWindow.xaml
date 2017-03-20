@@ -24,24 +24,34 @@
             <ColumnDefinition Width="32*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBox x:Name="serverIP"
-                 Margin="5"
-                 Grid.Column="1"/>
-
-        <Label x:Name="label1"
+         <Label x:Name="label1"
                Margin="5"
                VerticalAlignment="Center"
                Content="Server IP:"/>
 
-        <TextBox x:Name="serverPort"
+        <TextBox x:Name="serverIP"
                  Margin="5"
-                 Grid.Column="3"/>
+                 Grid.Column="1"/>
 
         <Label x:Name="label2"
                Margin="5"
                VerticalAlignment="Center"
                Grid.Column="2"
                Content="Port:"/>
+
+        <TextBox x:Name="serverPort"
+                 Margin="5"
+                 Grid.Column="3"/>
+
+        <Label x:Name="label4"
+               Margin="5"
+               VerticalAlignment="Center"
+               Grid.Column="4"
+               Content="Local Name:"/>
+
+        <TextBox x:Name="localName"
+                 Margin="5"
+                 Grid.Column="5"/>
 
         <TextBox x:Name="chatBox"
                  Margin="5"
@@ -50,6 +60,20 @@
                  Grid.RowSpan="4"
                  IsReadOnly="True"
                  VerticalScrollBarVisibility="Visible"/>
+
+        <CheckBox x:Name="enableServer"
+                  Margin="5"
+                  Content="Enable Server"
+                  VerticalAlignment="Center"
+                  Grid.Column="5"
+                  Grid.Row="1"/>
+
+        <CheckBox x:Name="useEncryptionBox"
+                  Margin="5"
+                  Content="Use Encryption"
+                  VerticalAlignment="Center"
+                  Grid.Column="5"
+                  Grid.Row="2"/>
 
         <Label x:Name="label3"
                Margin="5"
@@ -64,16 +88,6 @@
                  Grid.Row="4"
                  IsReadOnly="True"
                  VerticalScrollBarVisibility="Auto"/>
-
-        <Label x:Name="label4"
-               Margin="5"
-               VerticalAlignment="Center"
-               Grid.Column="4"
-               Content="Local Name:"/>
-
-        <TextBox x:Name="localName"
-                 Margin="5"
-                 Grid.Column="5"/>
 
         <Label x:Name="label5"
                Margin="5"
@@ -92,19 +106,5 @@
                 Grid.Column="5"
                 Grid.Row="5"
                 Content="Send"/>
-
-        <CheckBox x:Name="enableServer"
-                  Margin="5"
-                  Content="Enable Server"
-                  VerticalAlignment="Center"
-                  Grid.Column="5"
-                  Grid.Row="1"/>
-
-        <CheckBox x:Name="useEncryptionBox"
-                  Margin="5"
-                  Content="Use Encryption"
-                  VerticalAlignment="Center"
-                  Grid.Column="5"
-                  Grid.Row="2"/>
     </Grid>
 </Window>
