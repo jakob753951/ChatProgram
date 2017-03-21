@@ -4,17 +4,21 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow"
+        Height="350"
+        Width="520"
+        MinHeight="350"
+        MinWidth="520">
     <Grid Margin="5">
         <Grid.RowDefinitions>
             <RowDefinition Height="10*"/>
             <RowDefinition Height="10*"/>
             <RowDefinition Height="10*"/>
             <RowDefinition Height="10*"/>
-            <RowDefinition Height="30*"/>
+            <RowDefinition Height="38*"/>
             <RowDefinition Height="10*"/>
-
         </Grid.RowDefinitions>
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="16*"/>
             <ColumnDefinition Width="24*"/>
@@ -24,14 +28,15 @@
             <ColumnDefinition Width="32*"/>
         </Grid.ColumnDefinitions>
 
-         <Label x:Name="LabelServerIP"
+        <Label x:Name="LabelServerIP"
                Margin="5"
                VerticalAlignment="Center"
                Content="Server IP:"/>
 
         <TextBox x:Name="serverIP"
                  Margin="5"
-                 Grid.Column="1"/>
+                 Grid.Column="1"
+                 VerticalContentAlignment="Center"/>
 
         <Label x:Name="LabelPort"
                Margin="5"
@@ -41,7 +46,8 @@
 
         <TextBox x:Name="serverPort"
                  Margin="5"
-                 Grid.Column="3"/>
+                 Grid.Column="3"
+                 VerticalContentAlignment="Center"/>
 
         <Label x:Name="LabelLocalName"
                Margin="5"
@@ -51,7 +57,8 @@
 
         <TextBox x:Name="localName"
                  Margin="5"
-                 Grid.Column="5"/>
+                 Grid.Column="5"
+                 VerticalContentAlignment="Center"/>
 
         <TextBox x:Name="chatBox"
                  Margin="5"
@@ -99,7 +106,8 @@
                  Margin="5"
                  Grid.Column="1"
                  Grid.Row="5"
-                 Grid.ColumnSpan="4"/>
+                 Grid.ColumnSpan="4"
+                 VerticalContentAlignment="Center"/>
 
         <Button x:Name="sendMessageButton"
                 Margin="5"
