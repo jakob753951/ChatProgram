@@ -8,7 +8,8 @@
         Height="350"
         Width="520"
         MinHeight="350"
-        MinWidth="520">
+        MinWidth="520"
+         Background="#FF7CA0FF">
     <Grid Margin="5">
         <Grid.RowDefinitions>
             <RowDefinition Height="10*"/>
