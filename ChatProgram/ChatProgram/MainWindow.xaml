@@ -13,10 +13,7 @@
     <Grid Margin="5">
         <Grid.RowDefinitions>
             <RowDefinition Height="10*"/>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="38*"/>
+            <RowDefinition Height="68*"/>
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
 
@@ -65,37 +62,39 @@
                  Margin="5"
                  Grid.Row="1"
                  Grid.ColumnSpan="5"
-                 Grid.RowSpan="4"
                  IsReadOnly="True"
                  VerticalScrollBarVisibility="Visible"/>
 
-        <CheckBox x:Name="enableServer"
+        <Grid Grid.Column="5" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="8*"/>
+            </Grid.RowDefinitions>
+            <CheckBox x:Name="enableServer"
                   Margin="5"
                   Content="Enable Server"
-                  VerticalAlignment="Center"
-                  Grid.Column="5"
-                  Grid.Row="1"/>
+                  VerticalAlignment="Center"/>
 
-        <CheckBox x:Name="useEncryptionBox"
+            <CheckBox x:Name="useEncryptionBox"
                   Margin="5"
                   Content="Use Encryption"
                   VerticalAlignment="Center"
-                  Grid.Column="5"
-                  Grid.Row="2"/>
+                  Grid.Row="1"/>
 
-        <Label x:Name="LabelMessagesFrom"
+            <Label x:Name="LabelMessagesFrom"
                Margin="5"
                VerticalAlignment="Center"
-               Grid.Column="5"
-               Grid.Row="3"
+               Grid.Row="2"
                Content="Messages from:"/>
 
-        <TextBox x:Name="messagesFrom"
+            <TextBox x:Name="messagesFrom"
                  Margin="5"
-                 Grid.Column="5"
-                 Grid.Row="4"
+                 Grid.Row="3"
                  IsReadOnly="True"
                  VerticalScrollBarVisibility="Auto"/>
+        </Grid>
 
         <Label x:Name="LabelMessage"
                Margin="5"
