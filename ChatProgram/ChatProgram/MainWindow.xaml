@@ -4,12 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="MainWindow"
+        Title="Chat Program"
         Height="350"
         Width="520"
         MinHeight="350"
         MinWidth="520"
-         Background="#FF7CA0FF">
+        Background="#FF7CA0FF"
+        Closing="Window_Closing"
+        >
     <Grid Margin="5">
         <Grid.RowDefinitions>
             <RowDefinition Height="10*"/>
@@ -73,27 +75,31 @@
                 <RowDefinition Height="8*"/>
             </Grid.RowDefinitions>
             <CheckBox x:Name="enableServer"
-                  Margin="5"
-                  Content="Enable Server"
-                  VerticalAlignment="Center"/>
+                      Margin="5"
+                      Content="Enable Server"
+                      VerticalAlignment="Center"
+                      Checked="EnableServer_Toggle"
+                      Unchecked="EnableServer_Toggle"/>
 
             <CheckBox x:Name="useEncryptionBox"
-                  Margin="5"
-                  Content="Use Encryption"
-                  VerticalAlignment="Center"
-                  Grid.Row="1"/>
+                      Margin="5"
+                      Content="Use Encryption"
+                      VerticalAlignment="Center"
+                      Grid.Row="1"
+                      Checked="UseEncryptionBox_CheckedToggle"
+                      Unchecked="UseEncryptionBox_CheckedToggle"/>
 
             <Label x:Name="LabelMessagesFrom"
-               Margin="5"
-               VerticalAlignment="Center"
-               Grid.Row="2"
-               Content="Messages from:"/>
+                   Margin="5"
+                   VerticalAlignment="Center"
+                   Grid.Row="2"
+                   Content="Messages from:"/>
 
             <TextBox x:Name="messagesFrom"
-                 Margin="5"
-                 Grid.Row="3"
-                 IsReadOnly="True"
-                 VerticalScrollBarVisibility="Auto"/>
+                     Margin="5"
+                     Grid.Row="3"
+                     IsReadOnly="True"
+                     VerticalScrollBarVisibility="Auto"/>
         </Grid>
 
         <Label x:Name="LabelMessage"
@@ -107,12 +113,14 @@
                  Grid.Column="1"
                  Grid.Row="5"
                  Grid.ColumnSpan="4"
-                 VerticalContentAlignment="Center"/>
+                 VerticalContentAlignment="Center"
+                 KeyUp="MessageText_KeyUp"/>
 
         <Button x:Name="sendMessageButton"
                 Margin="5"
                 Grid.Column="5"
                 Grid.Row="5"
-                Content="Send"/>
+                Content="Send"
+                Click="SendMessageButton_Click"/>
     </Grid>
 </Window>

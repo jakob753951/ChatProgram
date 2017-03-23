@@ -1,17 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Net;
 using NetworkCommsDotNet;
 using NetworkCommsDotNet.DPSBase;
@@ -34,7 +25,9 @@ namespace ChatProgram
             lastPeerMessageDict = new Dictionary<ShortGuid, ChatMessage>();
         /// <summary>
         /// The maximum number of times a chat message will be relayed
-        /// </summary> int relayMaximum = 3;
+        /// </summary>
+
+        int relayMaximum = 3;
 
         /// <summary>
         /// An optional encryption key to use should one be required.
